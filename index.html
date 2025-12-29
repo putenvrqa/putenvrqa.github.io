@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Puteri Novariqa — Portfolio</title>
+  <meta name="description" content="Portfolio website of Puteri Novariqa." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Progress -->
+  <div class="top-progress" id="topProgress"></div>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot"></span>
+        <span>Puteri Novariqa</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn small" href="#" target="_blank" rel="noreferrer">Download CV</a>
+      </nav>
+
+      <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#" target="_blank" rel="noreferrer">Download CV</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero / About -->
+    <section class="section hero" id="about">
+      <div class="container grid-2">
+        <div>
+          <p class="kicker">Informatics Student</p>
+          <h1>
+            Hi, I'm <span class="accent">Puteri Novariqa</span>.
+          </h1>
+          <p class="sub">
+            An Informatics student interested in software engineering and frontend
+            development. I enjoy building web and mobile projects using HTML, CSS,
+            JavaScript, Kotlin, and Figma, and I’m currently looking for an internship
+            to learn and contribute to real-world development.
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Indonesia</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Email</span>
+              <span class="meta-value">puteri.novrqa@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="hero-card-top">
+            <img src="assets/profile.png" alt="Puteri Novariqa portrait">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">Projects made by me.</p>
+        </div>
+
+        <div class="cards">
+          <!-- Project Card -->
+          <article class="card">
+            <div class="card-top">
+              <h3>SmartCram</h3>
+              <div class="tags">
+                <span class="tag">Figma</span>
+              </div>
+            </div>
+            <p class="card-desc">
+              Projects description.
+            </p>
+            <ul class="card-bullets">
+              <li>Highlight impact/feature #1</li>
+              <li>Highlight impact/feature #2</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>FarmEquip</h3>
+              <div class="tags">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Android</span>
+                <span class="tag">Firebase</span>
+              </div>
+            </div>
+            <p class="card-desc">
+              Projects description.
+            </p>
+            <ul class="card-bullets">
+              <li>MVVM / API integration / local storage</li>
+              <li>Notifications / background tasks / etc.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Project Name</h3>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+              </div>
+            </div>
+            <p class="card-desc">
+              Short: dataset → model → evaluation result.
+            </p>
+            <ul class="card-bullets">
+              <li>Cross-validation / time split evaluation</li>
+              <li>Feature engineering + preprocessing</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn small" href="#" target="_blank" rel="noreferrer">Report</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">These are lists of my skills.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Core</h3>
+            <div class="pills">
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">Git/GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <h3>Mobile / App</h3>
+            <div class="pills">
+              <span class="pill">Kotlin</span>
+              <span class="pill">Android</span>
+              <span class="pill">Firebase</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <h3>Data</h3>
+            <div class="pills">
+              <span class="pill">Python</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">NumPy</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <h3>Design</h3>
+            <div class="pills">
+              <span class="pill">Figma</span>
+              <span class="pill">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact-card">
+          <h2>Contact</h2>
+          <p class="muted">Want to collaborate or discuss internship opportunities? Reach out.</p>
+
+          <div class="contact-row">
+            <div>
+              <div class="label">Email</div>
+              <div class="value" id="emailText">puteri.novrqa@gmail.com</div>
+            </div>
+            <button class="btn small" id="copyEmail">Copy</button>
+          </div>
+
+          <div class="contact-links">
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Download CV</a>
+          </div>
+
+          <p class="tiny muted">© <span id="year"></span> Puteri Novariqa. Built with HTML/CSS.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
