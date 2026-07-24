@@ -4,155 +4,170 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Puteri Novariqa — Portfolio</title>
-  <meta name="description" content="Portfolio website of Puteri Novariqa." />
+  <meta name="description" content="Portfolio website of Puteri Novariqa, an Informatics student interested in software engineering and frontend development." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top Progress -->
   <div class="top-progress" id="topProgress"></div>
 
   <!-- Navbar -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="brand">
         <span class="brand-dot"></span>
         <span>Puteri Novariqa</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a class="btn small" href="#" target="_blank" rel="noreferrer">Download CV</a>
+        <a href="assets/Puteri-Novariqa-CV.pdf" class="btn btn-outline" target="_blank" rel="noreferrer">
+          Download CV
+        </a>
       </nav>
 
-      <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-    </div>
-
-    <div class="nav-mobile" id="navMobile" aria-hidden="true">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a class="btn" href="#" target="_blank" rel="noreferrer">Download CV</a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero / About -->
-    <section class="section hero" id="about">
-      <div class="container grid-2">
-        <div>
-          <p class="kicker">Informatics Student</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">
+            <span></span>
+            Informatics Student
+          </p>
+
           <h1>
-            Hi, I'm <span class="accent">Puteri Novariqa</span>.
+            Hi, I’m <br />
+            <span>Puteri Novariqa.</span>
           </h1>
-          <p class="sub">
+
+          <p class="hero-description">
             An Informatics student interested in software engineering and frontend
             development. I enjoy building web and mobile projects using HTML, CSS,
             JavaScript, Kotlin, and Figma, and I’m currently looking for an internship
             to learn and contribute to real-world development.
           </p>
 
-          <div class="cta">
-            <a class="btn" href="#projects">See Projects</a>
-            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">See Projects</a>
+            <a href="https://github.com/putenvrqa" class="btn btn-secondary" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/puteri-novrqa" class="btn btn-secondary" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
 
-          <div class="meta">
-            <div class="meta-item">
-              <span class="meta-label">Location</span>
-              <span class="meta-value">Indonesia</span>
+          <div class="hero-info">
+            <div class="info-card">
+              <p>Location</p>
+              <h3>Indonesia</h3>
             </div>
-            <div class="meta-item">
-              <span class="meta-label">Email</span>
-              <span class="meta-value">puteri.novrqa@gmail.com</span>
+
+            <div class="info-card">
+              <p>Email</p>
+              <h3>puteri.novrqa@gmail.com</h3>
             </div>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <div class="hero-card-top">
-            <img src="assets/profile.png" alt="Puteri Novariqa portrait">
-          </div>
+        <div class="hero-image-wrap">
+          <img src="assets/profile.png" alt="Puteri Novariqa portrait" class="hero-image" />
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section class="section" id="projects">
+    <section class="section section-divider" id="projects">
       <div class="container">
-        <div class="section-head">
-          <h2>Projects</h2>
-          <p class="muted">Projects made by me.</p>
+        <div class="section-header">
+          <p class="section-label">My Work</p>
+          <div>
+            <h2>Projects</h2>
+            <p>A selection of projects I’ve worked on.</p>
+          </div>
         </div>
 
-        <div class="cards">
-          <!-- Project Card -->
-          <article class="card">
-            <div class="card-top">
-              <h3>SmartCram</h3>
-              <div class="tags">
-                <span class="tag">Figma</span>
-              </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-preview">
+              <span>Web Application</span>
             </div>
-            <p class="card-desc">
-              Projects description.
-            </p>
-            <ul class="card-bullets">
-              <li>Highlight impact/feature #1</li>
-              <li>Highlight impact/feature #2</li>
-            </ul>
-            <div class="card-actions">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn small" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+
+            <div class="project-content">
+              <p class="project-category">Web Application</p>
+              <h3>Invoice Tracking & Inventory Lending</h3>
+              <p>
+                A web application designed to support invoice tracking and inventory
+                lending documentation for IT operational needs.
+              </p>
+
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Firebase</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">View Project</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-top">
+          <article class="project-card">
+            <div class="project-preview">
+              <span>Mobile Application</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-category">Mobile Application</p>
               <h3>FarmEquip</h3>
+              <p>
+                An Android application project focused on helping users rent farming
+                equipment through a mobile platform.
+              </p>
+
               <div class="tags">
-                <span class="tag">Kotlin</span>
-                <span class="tag">Android</span>
-                <span class="tag">Firebase</span>
+                <span>Kotlin</span>
+                <span>Android</span>
+                <span>Firebase</span>
               </div>
-            </div>
-            <p class="card-desc">
-              Projects description.
-            </p>
-            <ul class="card-bullets">
-              <li>MVVM / API integration / local storage</li>
-              <li>Notifications / background tasks / etc.</li>
-            </ul>
-            <div class="card-actions">
-              <a class="btn small" href="#" target="_blank" rel="noreferrer">GitHub</a>
+
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-top">
-              <h3>Project Name</h3>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">ML</span>
-              </div>
+          <article class="project-card">
+            <div class="project-preview">
+              <span>UI/UX Design</span>
             </div>
-            <p class="card-desc">
-              Short: dataset → model → evaluation result.
-            </p>
-            <ul class="card-bullets">
-              <li>Cross-validation / time split evaluation</li>
-              <li>Feature engineering + preprocessing</li>
-            </ul>
-            <div class="card-actions">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn small" href="#" target="_blank" rel="noreferrer">Report</a>
+
+            <div class="project-content">
+              <p class="project-category">UI/UX Design</p>
+              <h3>SmartCram</h3>
+              <p>
+                A UI/UX design project for a smart flashcard application that helps
+                students study more effectively.
+              </p>
+
+              <div class="tags">
+                <span>Figma</span>
+                <span>UI/UX</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">View Design</a>
+              </div>
             </div>
           </article>
         </div>
@@ -162,45 +177,52 @@
     <!-- Skills -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-head">
-          <h2>Skills</h2>
-          <p class="muted">These are lists of my skills.</p>
+        <div class="section-header">
+          <p class="section-label">What I Can Do</p>
+          <div>
+            <h2>Skills</h2>
+            <p>Technologies and tools I work with.</p>
+          </div>
         </div>
 
         <div class="skills-grid">
-          <div class="skill-box">
-            <h3>Core</h3>
-            <div class="pills">
-              <span class="pill">HTML</span>
-              <span class="pill">CSS</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">Git/GitHub</span>
+          <div class="skill-card">
+            <div class="skill-icon">⌘</div>
+            <h3>Frontend</h3>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
           </div>
 
-          <div class="skill-box">
+          <div class="skill-card">
+            <div class="skill-icon">▣</div>
             <h3>Mobile / App</h3>
-            <div class="pills">
-              <span class="pill">Kotlin</span>
-              <span class="pill">Android</span>
-              <span class="pill">Firebase</span>
+            <div class="tags">
+              <span>Kotlin</span>
+              <span>Android</span>
+              <span>Firebase</span>
             </div>
           </div>
 
-          <div class="skill-box">
+          <div class="skill-card">
+            <div class="skill-icon">◉</div>
             <h3>Data</h3>
-            <div class="pills">
-              <span class="pill">Python</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">NumPy</span>
+            <div class="tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
             </div>
           </div>
 
-          <div class="skill-box">
+          <div class="skill-card">
+            <div class="skill-icon">✦</div>
             <h3>Design</h3>
-            <div class="pills">
-              <span class="pill">Figma</span>
-              <span class="pill">UI/UX</span>
+            <div class="tags">
+              <span>Figma</span>
+              <span>Canva</span>
+              <span>UI/UX Design</span>
             </div>
           </div>
         </div>
@@ -208,31 +230,46 @@
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container contact">
+    <section class="section section-divider" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Get In Touch</p>
+          <div>
+            <h2>Contact</h2>
+            <p>Feel free to reach out for collaboration or internship opportunities.</p>
+          </div>
+        </div>
+
         <div class="contact-card">
-          <h2>Contact</h2>
-          <p class="muted">Want to collaborate or discuss internship opportunities? Reach out.</p>
+          <div>
+            <p class="contact-label">Email</p>
+            <h3 id="emailText">puteri.novrqa@gmail.com</h3>
+            <button class="btn btn-secondary btn-small" id="copyEmail">Copy Email</button>
+          </div>
 
-          <div class="contact-row">
-            <div>
-              <div class="label">Email</div>
-              <div class="value" id="emailText">puteri.novrqa@gmail.com</div>
+          <div class="contact-divider"></div>
+
+          <div>
+            <p class="contact-label">Connect with me</p>
+            <p class="contact-text">Let’s connect and build something meaningful together.</p>
+
+            <div class="contact-actions">
+              <a href="https://www.linkedin.com/in/puteri-novrqa" class="btn btn-secondary" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/putenvrqa" class="btn btn-secondary" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="assets/Puteri-Novariqa-CV.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">Download CV</a>
             </div>
-            <button class="btn small" id="copyEmail">Copy</button>
           </div>
-
-          <div class="contact-links">
-            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn" href="#" target="_blank" rel="noreferrer">Download CV</a>
-          </div>
-
-          <p class="tiny muted">© <span id="year"></span> Puteri Novariqa. Built with HTML/CSS.</p>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container footer-content">
+    <p>© <span id="year"></span> Puteri Novariqa. All rights reserved.</p>
+  </div>
+</footer>
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 

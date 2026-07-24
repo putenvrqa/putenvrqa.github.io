@@ -1,54 +1,75 @@
-// Mobile nav
-const burger = document.getElementById("burger");
-const navMobile = document.getElementById("navMobile");
+// Mobile Navbar
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-burger?.addEventListener("click", () => {
-  const isOpen = navMobile.style.display === "block";
-  navMobile.style.display = isOpen ? "none" : "block";
-  burger.setAttribute("aria-expanded", String(!isOpen));
-  navMobile.setAttribute("aria-hidden", String(isOpen));
-});
-
-// Close mobile nav when clicking a link
-navMobile?.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => {
-    navMobile.style.display = "none";
-    burger.setAttribute("aria-expanded", "false");
-    navMobile.setAttribute("aria-hidden", "true");
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
   });
-});
 
-// Copy email
+  // Close mobile menu after clicking a link
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+    });
+  });
+}
+
+// Copy Email
+const copyEmailBtn = document.getElementById("copyEmail");
 const emailText = document.getElementById("emailText");
-const copyBtn = document.getElementById("copyEmail");
 
-copyBtn?.addEventListener("click", async () => {
-  const email = emailText?.textContent?.trim() || "";
-  try {
-    await navigator.clipboard.writeText(email);
-    copyBtn.textContent = "Copied!";
-    setTimeout(() => (copyBtn.textContent = "Copy"), 1200);
-  } catch {
-    alert("Copy failed. Please copy manually: " + email);
-  }
-});
+if (copyEmailBtn && emailText) {
+  copyEmailBtn.addEventListener("click", async () => {
+    const email = emailText.textContent.trim();
 
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailBtn.textContent = "Copied!";
+      
+      setTimeout(() => {
+        copyEmailBtn.textContent = "Copy Email";
+      }, 1500);
+    } catch (error) {
+      alert("Failed to copy email. Please copy it manually.");
+    }
+  });
+}
 
-// Back to top + progress bar
+// Current Year
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+// Back to Top + Progress Bar
 const toTop = document.getElementById("toTop");
 const topProgress = document.getElementById("topProgress");
 
 window.addEventListener("scroll", () => {
-  const y = window.scrollY;
-  const h = document.documentElement.scrollHeight - window.innerHeight;
-  const p = h > 0 ? (y / h) * 100 : 0;
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
-  if (topProgress) topProgress.style.width = `${p}%`;
-  if (toTop) toTop.classList.toggle("show", y > 600);
+  if (topProgress) {
+    topProgress.style.width = `${scrollPercent}%`;
+  }
+
+  if (toTop) {
+    if (scrollTop > 500) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
+  }
 });
 
-toTop?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+if (toTop) {
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
