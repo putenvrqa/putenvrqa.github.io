@@ -376,18 +376,23 @@ a{
 }
 
 .project-preview{
-  margin:20px 20px 0;
-  min-height:160px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(34,211,238,.20), transparent 35%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035));
+  margin:16px 16px 0;
+  border-radius:22px;
+  overflow:hidden;
   border:1px solid rgba(255,255,255,.08);
-  color:rgba(255,255,255,.70);
-  font-weight:800;
+  background:transparent;
+}
+
+.project-preview img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:22px;
+  transition:.25s ease;
+}
+
+.project-card:hover .project-preview img{
+  transform:scale(1.02);
 }
 
 .project-content{
@@ -429,6 +434,9 @@ a{
 }
 
 .project-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
   margin-top:18px;
 }
 
